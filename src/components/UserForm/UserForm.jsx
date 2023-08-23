@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import css from './UserForm.module.css';
 import { Component } from 'react';
 
+
 export class UserForm extends Component {
   state = {
     name: '',
@@ -15,9 +16,8 @@ export class UserForm extends Component {
   setName = e => {
     e.preventDefault();
 
-  
     const userName = this.props.createUser({ ...this.state});
-    
+
     userName && this.setState({ name: '', number: '' });
   };
 
